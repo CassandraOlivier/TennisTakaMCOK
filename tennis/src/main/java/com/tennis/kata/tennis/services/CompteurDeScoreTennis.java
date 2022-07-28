@@ -44,7 +44,11 @@ public class CompteurDeScoreTennis {
 
 	public void ajoutPointJoueur(Joueur joueur1) {
 		int point = joueur1.getPoint();
-		point += 1;
-		joueur1.setPoint(point);
+		
+		if( 0 == point) {
+			point = 1;
+			joueur1.setPoint(15);
+		}
+	
 	}
 }
