@@ -139,4 +139,16 @@ class TennisKataApplicationTests {
     	
     	assertEquals(15, partie.getJoueur1().getPoint());
     }
+    
+    @Test
+    public void creationPartie_return30Avec1Point() throws Exception{
+    	Joueur joueur1 = compteurDeScoreTennis.creationJoueur("joueur1");
+    	Joueur joueur2 = compteurDeScoreTennis.creationJoueur("joueur2");
+    
+    	Partie partie = compteurDeScoreTennis.creationPartie(joueur1,joueur2);
+    	
+    	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
+    	
+    	assertEquals(30, partie.getJoueur1().getPoint());
+    }
 }
