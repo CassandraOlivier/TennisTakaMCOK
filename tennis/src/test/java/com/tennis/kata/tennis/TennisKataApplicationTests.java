@@ -148,7 +148,24 @@ class TennisKataApplicationTests {
     	Partie partie = compteurDeScoreTennis.creationPartie(joueur1,joueur2);
     	
     	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
+    	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
     	
     	assertEquals(30, partie.getJoueur1().getPoint());
     }
+    
+    @Test
+    public void creationPartie_return40Avec1Point() throws Exception{
+    	Joueur joueur1 = compteurDeScoreTennis.creationJoueur("joueur1");
+    	Joueur joueur2 = compteurDeScoreTennis.creationJoueur("joueur2");
+    
+    	Partie partie = compteurDeScoreTennis.creationPartie(joueur1,joueur2);
+    	
+    	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
+    	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
+    	compteurDeScoreTennis.ajoutPointJoueur(joueur1);
+    	
+    	assertEquals(40, partie.getJoueur1().getPoint());
+    }
+    
+    
 }
