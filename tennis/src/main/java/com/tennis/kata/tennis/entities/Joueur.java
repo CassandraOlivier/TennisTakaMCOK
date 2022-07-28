@@ -6,12 +6,17 @@ public class Joueur {
 	private int point;
 	private int jeu;
 	private int set;
+	private boolean avantage;
+	private boolean dernierPoint;
 
 	public Joueur() {
 		super();
 		this.point = 0;
 		this.jeu = 0;
 		this.set = 0;
+		this.avantage = false;
+		this.dernierPoint = false;
+
 	}
 
 	public String getName() {
@@ -45,5 +50,22 @@ public class Joueur {
 	public void setSet(int set) {
 		this.set = set;
 	}
-		
+
+	public boolean isAvantage() {
+		return avantage;
+	}
+
+	public void setAvantage(boolean avantage) {
+		this.avantage = avantage;
+	}
+
+	public boolean isDernierPoint() {
+		return dernierPoint;
+	}
+
+	public void setDernierPoint(boolean dernierPoint) {
+		this.dernierPoint = dernierPoint;
+	}
+
+	
 }
